@@ -1,6 +1,6 @@
 
 
-public class Player implements Movable
+public class Player extends Weight implements Movable
 {
     private Floor position;
     private Direction direction;

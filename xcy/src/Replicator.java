@@ -6,9 +6,7 @@ public class Replicator implements Movable {
     private Direction direction;
 
     @Override
-    public void step() {
-
-    }
+    public void step() { }
 
     @Override
     public void setPosition(Floor position) {
@@ -20,5 +18,5 @@ public class Replicator implements Movable {
         return position;
     }
 
-    public void die()[{}
+    public void die(){}
 }

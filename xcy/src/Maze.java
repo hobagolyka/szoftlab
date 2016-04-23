@@ -25,7 +25,6 @@ public class Maze {
         Box box;
         ZPM zpm;
 
-
         while(run)
         {
             System.out.println("Válassz test esetet: ");
