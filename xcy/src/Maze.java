@@ -20,7 +20,7 @@ public class Maze {
         String[] darabok = {"","",""};
         String[] palya = {"fg", "sd", "fg"};
 
-        System.out.println("Lehetséges parancsok:\n " +
+        System.out.println("Lehetseges parancsok:\n " +
                 "load filename\n " +
                 "print filename \n " +
                 "step mo \n " +
@@ -37,7 +37,7 @@ public class Maze {
 
         while(run)
         {
-            System.out.println("Jöhetnek a parancsok: ");
+            System.out.println("Johetnek a parancsok: ");
 
             try
             {
@@ -67,6 +67,7 @@ public class Maze {
                 * */
                 case "load":
                     palya = ReadMaze("tesztek/"+masodik);
+
                     break;
 
                 /* print filename
