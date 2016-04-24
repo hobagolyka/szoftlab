@@ -4,12 +4,12 @@
 public class WormholeYB {
     private static WormholeYB instance = new WormholeYB();
 
-    private WormholeRG() { super();}
+   // private WormholeRG() { super();}
 
-    public static WormholeRG getInstance()
+    public static WormholeYB getInstance()
     {
-        Logger.enter(WormholeRG.class, "getInstance()", null);
-        Logger.exit(WormholeRG.class, "getInstance()", null);
+        Logger.enter(WormholeYB.class, "getInstance()", null);
+        Logger.exit(WormholeYB.class, "getInstance()", null);
 
         return instance;
     }
