@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="textDif:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/textDif_jar</output-path>
+    <root id="archive" name="textDif.jar">
+      <element id="module-output" name="textDif" />
+    </root>
+  </artifact>
+</component>

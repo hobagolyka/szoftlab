@@ -180,7 +180,7 @@ public class Maze {
 
             int i;
             for ( i=0; i < aryLines.length; i++ ) {
-               System.out.println(aryLines[i]) ;
+                System.out.println(aryLines[i]) ;
             }
             return aryLines;
         } catch (IOException e){
