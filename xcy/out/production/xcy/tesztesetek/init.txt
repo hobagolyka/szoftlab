@@ -1,0 +1,4 @@
+load inittest.txt
+print inittest_result.txt
+fdfgsdf
+load

@@ -6,6 +6,7 @@ import java.net.URL;
 public class Maze {
 
     private static boolean run = true;
+    private static int g = 0; /* ez a file felülírás elkerüléséhez kell, de megmaradhassanak a régiek is */
 
     /**
      * Ez a függvény a main függvény, innen indul a játék
@@ -66,7 +67,12 @@ public class Maze {
                 * Opciók: filename: a játéktér leírását tartalmazó txt fájl neve
                 * */
                 case "load":
-                    palya = ReadMaze("tesztek/"+masodik);
+                    if(masodik.length() == 0){
+                        System.out.println("load filename: filename.txt formaban kell megadni");
+                        break;
+                    }
+                    else
+                        palya = ReadMaze("tesztek/"+masodik);
 
                     break;
 
@@ -77,8 +83,9 @@ public class Maze {
                  *  Opciók: filename: a txt fájl neve, amibe a játéktér állapotát menteni szeretnénk.
                  *  */
                 case "print":
+                    System.out.println("print");
                     if (masodik != null) {
-                        WriteMaze(masodik, palya);
+                        WriteMaze("forcomparator/"+masodik, palya);
                     }
                     break;
 
@@ -89,6 +96,7 @@ public class Maze {
                  * Opciók: mo = {o | j | r}
                  * */
                 case "step":
+                    System.out.println("step");
                     break;
 
                 /* setDir mo dir
@@ -99,6 +107,7 @@ public class Maze {
                 * Opciók: mo = {o | j | r}, dir = {fel | le | jobb | bal | f | l | j | b}
                 * */
                 case "setDir":
+                    System.out.println("setDir");
                     break;
 
                 /* pickup mo
@@ -113,6 +122,7 @@ public class Maze {
                 * Opciók: mo = {o | j }
                  */
                 case "pickup":
+                    System.out.println("pickup");
                     break;
 
                 /* putdown mo
@@ -192,7 +202,7 @@ public class Maze {
     /**
      * Ez a függvény való a pálya változásainak elmentésére, egy új/vagy régi txt fileba menti el
      */
-    public static void WriteMaze(String path, String[] ujpalya){
+    public static void WriteMaze(String path, String[] ujpalya) throws IOException{
         try {
             WriteFile data = new WriteFile(path, true);
             for(int i = 0; i < ujpalya.length; i++)
